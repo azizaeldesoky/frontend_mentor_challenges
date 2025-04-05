@@ -1,0 +1,85 @@
+body {
+  background-color: #f4d04e;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+.card {
+  width: 384px;
+  height: 522px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 8px 8px #000000;
+  border: 1px solid black;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.card img {
+  width: 336px;
+  height: 200px;
+  margin: 24px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@media (max-width: 375px) {
+  .card {
+    width: 327px;
+    height: 501px;
+  }
+  .card img {
+    width: 279px;
+    height: 200px;
+    margin-bottom: 0;
+  }
+}
+.content {
+  margin: auto 24px;
+}
+.content .btn {
+  background-color: #f4d04e;
+  width: fit-content;
+  padding: 4px 12px;
+  margin-top: 0;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.date {
+  font-size: 14px;
+}
+.card h2:hover {
+  color: #f4d04e;
+  cursor: pointer;
+}
+.longP {
+  color: hsl(0, 0%, 42%);
+  font-size: 16px;
+  line-height: 1.5;
+  word-spacing: 1px;
+}
+
+.user img {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+}
+.user span {
+  font-size: 14px;
+  font-weight: bold;
+  top: -11px;
+  position: relative;
+  padding-left: 11px;
+}
