@@ -1,0 +1,124 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: hsl(292, 42%, 14%);
+  font-family: "Work Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.background {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, url("your-image.jpg") no-repeat center top/cover 25%, #f4f4f4 0%);
+  position: relative;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 33.3333%;
+  flex: 1;
+  background-image: url("assets/images/background-pattern-desktop.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background::after {
+  display: flex;
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 66.6667%;
+  flex: 2;
+  background-color: hsl(275, 100%, 97%);
+  z-index: -1;
+}
+
+.card {
+  background-color: hsl(0, 100%, 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 560px;
+  height: 512px;
+  z-index: 1;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.card span {
+  align-items: center;
+  display: flex;
+}
+.card .heading {
+  display: flex;
+  gap: 19px;
+  top: -10px;
+  position: relative;
+  padding: 0 0 0 1rem;
+}
+.card h1 {
+  font-size: 40px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.accordion-item .accordion-title {
+  font-size: 16px;
+}
+.accordion-item button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+button[aria-expanded=true] .image {
+  content: url(assets/images/icon-minus.svg);
+}
+button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1em 0;
+}
+
+/*# sourceMappingURL=style.css.map */
